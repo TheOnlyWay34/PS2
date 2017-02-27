@@ -18,13 +18,11 @@ public class MyInteger {
 	}
 
 	public boolean isEven() {
-		double x = getiValue() % 2;
-		return x == 0;
+		return (getiValue() % 2) == 0;
 	}
 
 	public boolean isOdd() {
-		double y = getiValue() % 2;
-		return y != 0;
+		return (getiValue() % 2) != 0;
 	}
 
 	public boolean isPrime() {
@@ -37,22 +35,36 @@ public class MyInteger {
 	}
 
 	public static boolean isEven(int var1) {
-		double x = var1 % 2;
-		return x == 0;
+		return (var1 % 2) == 0;
 	}
 
 	public static boolean isOdd(int var2) {
-		double y = var2 % 2;
-		return y != 0;
+		return (var2 % 2) != 0;
 	}
 
 	public static boolean isPrime(int var3) {
-		for (int z = 2; z <= (var3 / 2); z += 1) {
-			if (var3 % z == 0) {
+		for (int a = 2; a <= (var3 / 2); a += 1) {
+			if (var3 % a == 0) {
 				return false;
 			}
 		}
 		return true;
 	}
-	
+
+	public static boolean isEven(MyInteger i) {
+		return (i.iValue % 2) == 0;
+	}
+
+	public static boolean isOdd(MyInteger j) {
+		return (j.iValue % 2) != 0;
+	}
+
+	public static boolean isPrime(MyInteger k) {
+		for (int b = 2; b <= (k.iValue / 2); b += 1) {
+			if (k.iValue % b == 0) {
+				return false;
+			}
+		}
+		return true;
+	}
 }
