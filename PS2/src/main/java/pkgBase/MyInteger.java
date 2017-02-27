@@ -6,7 +6,7 @@ public class MyInteger {
 
 	public MyInteger(int iValue) {
 		super();
-		this.iValue = iValue;
+		setiValue(iValue);
 	}
 
 	public int getiValue() {
@@ -66,5 +66,13 @@ public class MyInteger {
 			}
 		}
 		return true;
+	}
+
+	public boolean equals(int d) {
+		return d == getiValue();
+	}
+
+	public boolean equals(MyInteger e) {
+		return e.iValue == getiValue();
 	}
 }
